@@ -15,21 +15,16 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text(
-          "Contador",
-          style: TextStyle(color: Colors.black),
-        ),
+        title: const Text("Contador"),
+        
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const SizedBox(height: 20),
-            const Text(
-              "NOE CARRILLO LIZARDI",
-              style: TextStyle(color: Colors.blueAccent),
-            ),
-            const SizedBox(height: 10),
+            const SizedBox(height: 10), // Añadir más espacio
+            const Text("NOE CARRILLO LIZARDI"),
+            const SizedBox(height: 10), // Añadir un espacio entre los textos
             const Text("Numero de clicks"),
             Text("$cont"),
           ],
@@ -49,19 +44,16 @@ class _HomePageState extends State<HomePage> {
           FloatingActionButton(
             child: const Icon(Icons.add),
             onPressed: () => _sumar(),
-            backgroundColor: Colors.purple, // Cambié el color del botón flotante
           ),
           const SizedBox(width: 10,),
           FloatingActionButton(
             child: const Icon(Icons.remove),
             onPressed: () => _restar(),
-            backgroundColor: Colors.purple, // Cambié el color del botón flotante
           ),
           const SizedBox(width: 10,),
           FloatingActionButton(
             child: const Icon(Icons.exposure_zero),
             onPressed: () => _restablecer(),
-            backgroundColor: Colors.purple, // Cambié el color del botón flotante
           ),
         ],
       ),
